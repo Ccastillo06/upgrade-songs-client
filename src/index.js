@@ -1,21 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
 
 import './index.scss';
-import App from './App';
+import AppApolloHoc from './hocs/AppApolloHoc';
 import * as serviceWorker from './serviceWorker';
 
-// Setting up Apollo client
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
-});
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <AppApolloHoc />,
   document.getElementById('root')
 );
 
