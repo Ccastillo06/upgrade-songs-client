@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { cookies } from 'brownies';
 
-const URI = 'http://localhost:4001/auth';
+const SERVICE_URL = 'https://upgrade-songs.herokuapp.com';
+const URI = `${SERVICE_URL}/auth`;
 const REGISTER = '/register';
 const LOGIN = '/login';
 

@@ -4,13 +4,15 @@ import { ApolloProvider } from 'react-apollo';
 import { cookies, subscribe } from 'brownies';
 import App from '../App';
 
+const SERVICE_URL = 'https://upgrade-songs.herokuapp.com';
+
 function AppApolloHoc({ children }) {
   const { authToken } = cookies;
   const [userAuthToken, setUserAuthToken] = useState(authToken);
 
   // Setting up Apollo client
   const client = new ApolloClient({
-    uri: 'http://localhost:4001/graphql',
+    uri: `${SERVICE_URL}/graphql`,
     headers: {
       Authorization: authToken
     }
