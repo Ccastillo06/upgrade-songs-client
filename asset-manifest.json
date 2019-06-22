@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/upgrade-songs-client/static/css/main.40818001.chunk.css",
+    "main.js": "/upgrade-songs-client/static/js/main.1a6bbe91.chunk.js",
+    "main.js.map": "/upgrade-songs-client/static/js/main.1a6bbe91.chunk.js.map",
+    "runtime~main.js": "/upgrade-songs-client/static/js/runtime~main.add77f86.js",
+    "runtime~main.js.map": "/upgrade-songs-client/static/js/runtime~main.add77f86.js.map",
+    "static/js/2.fcc9e9c7.chunk.js": "/upgrade-songs-client/static/js/2.fcc9e9c7.chunk.js",
+    "static/js/2.fcc9e9c7.chunk.js.map": "/upgrade-songs-client/static/js/2.fcc9e9c7.chunk.js.map",
+    "index.html": "/upgrade-songs-client/index.html",
+    "precache-manifest.e9cc5d46052ad1161f03392d18408455.js": "/upgrade-songs-client/precache-manifest.e9cc5d46052ad1161f03392d18408455.js",
+    "service-worker.js": "/upgrade-songs-client/service-worker.js",
+    "static/css/main.40818001.chunk.css.map": "/upgrade-songs-client/static/css/main.40818001.chunk.css.map"
+  }
+}
