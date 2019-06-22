@@ -1,10 +1,11 @@
 import React from 'react';
-import { graphql } from 'react-apollo';
+import { graphql, compose } from 'react-apollo';
 
 import { getSongsQuery } from '../graphql/queries';
+import { deleteSongMutation } from '../graphql/mutations';
 
-function SongList({ data, history }) {
-  const { loading, songs } = data;
+function SongList({ songsQuery, deleteSong, history }) {
+  const { loading, songs } = songsQuery;
 
   if (loading) {
     return <h1>Fetching songs...</h1>;
@@ -20,6 +21,18 @@ function SongList({ data, history }) {
           <li key={id}>
             <p>Name: {name}</p>
             <p>Genre: {genre}</p>
+            <button
+              onClick={() =>
+                deleteSong({
+                  variables: {
+                    id
+                  },
+                  refetchQueries: [{ query: getSongsQuery }]
+                })
+              }
+            >
+              Delete Song
+            </button>
           </li>
         ))}
       </ul>
@@ -27,4 +40,7 @@ function SongList({ data, history }) {
   );
 }
 
-export default graphql(getSongsQuery)(SongList);
+export default compose(
+  graphql(getSongsQuery, { name: 'songsQuery' }),
+  graphql(deleteSongMutation, { name: 'deleteSong' })
+)(SongList);

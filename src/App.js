@@ -5,6 +5,7 @@ import Home from './components/Home';
 import SongList from './components/SongList';
 import AuthorList from './components/AuthorList';
 import SongForm from './components/SongForm';
+import AuthorForm from './components/AuthorForm';
 
 import './App.scss';
 
@@ -17,6 +18,7 @@ function App({ data }) {
           <Route exact path="/songs" component={SongList} />
           <Route exact path="/authors" component={AuthorList} />
           <Route exact path="/create-song" component={SongForm} />
+          <Route exact path="/create-author" component={AuthorForm} />
           <Route path="/" component={Home} />
         </Switch>
       </div>

@@ -8,3 +8,20 @@ export const addSongMutation = gql`
     }
   }
 `;
+
+export const deleteSongMutation = gql`
+  mutation($id: ID!) {
+    deleteSong(id: $id) {
+      id
+    }
+  }
+`;
+
+export const addAuthorMutation = gql`
+  mutation($name: String!, $age: Int!) {
+    addAuthor(name: $name, age: $age) {
+      id
+      name
+    }
+  }
+`;
